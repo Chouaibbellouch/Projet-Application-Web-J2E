@@ -8,18 +8,18 @@
     <packaging>war</packaging>
     <dependencies>
         <!-- Hibernate core -->
-<dependency>
-    <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-core</artifactId>
-    <version>5.4.30.Final</version> <!-- Utilisez la dernière version compatible avec votre application -->
-</dependency>
+		<dependency>
+    		<groupId>org.hibernate</groupId>
+    		<artifactId>hibernate-core</artifactId>
+    		<version>5.4.30.Final</version> <!-- Utilisez la dernière version compatible avec votre application -->
+		</dependency>
 
 <!-- Hibernate EntityManager -->
-<dependency>
-    <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-entitymanager</artifactId>
-    <version>5.4.30.Final</version> <!-- Utilisez la dernière version compatible avec votre application -->
-</dependency>
+		<dependency>
+    		<groupId>org.hibernate</groupId>
+    		<artifactId>hibernate-entitymanager</artifactId>
+    		<version>5.4.30.Final</version> <!-- Utilisez la dernière version compatible avec votre application -->
+		</dependency>
 
 
         <!-- JPA API -->
@@ -44,19 +44,53 @@
             <scope>provided</scope>
         </dependency>
         
+        
         <dependency>
-    <groupId>javax.inject</groupId>
-    <artifactId>javax.inject</artifactId>
-    <version>1</version>
-</dependency>
+    		<groupId>javax.inject</groupId>
+    		<artifactId>javax.inject</artifactId>
+    		<version>1</version>
+		</dependency>
 
         
         <dependency>
-    <groupId>javax.ejb</groupId>
-    <artifactId>javax.ejb-api</artifactId>
-    <version>3.2</version>
-    <scope>provided</scope>
+    		<groupId>javax.ejb</groupId>
+    		<artifactId>javax.ejb-api</artifactId>
+    		<version>3.2</version>
+    		<scope>provided</scope>
+		</dependency>
+		
+		<!-- JSTL -->
+		<dependency>
+    		<groupId>javax.servlet</groupId>
+    		<artifactId>jstl</artifactId>
+    		<version>1.2</version>
+		</dependency>
+		
+		<dependency>
+    		<groupId>org.glassfish.web</groupId>
+    		<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+    		<version>3.0.1</version>
+		</dependency>
+		
+		<dependency>
+    <groupId>jakarta.servlet.jsp.jstl</groupId>
+    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+    <version>3.0.0</version>
 </dependency>
+<dependency>
+    <groupId>org.glassfish.web</groupId>
+    <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+    <version>3.0.1</version>
+</dependency>
+
+		
+		<!-- Standard -->
+		<dependency>
+    		<groupId>taglibs</groupId>
+    		<artifactId>standard</artifactId>
+    		<version>1.1.2</version>
+		</dependency>
+
 
     </dependencies>
     <build>

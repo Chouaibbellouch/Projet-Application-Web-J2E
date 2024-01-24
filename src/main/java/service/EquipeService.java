@@ -31,6 +31,10 @@ public class EquipeService {
             equipeRepository.delete(equipe);
         }
     }
+    
+    public void setEquipeRepository(EquipeRepository equipeRepository) {
+        this.equipeRepository = equipeRepository;
+    }
 
     // Ajoutez ici d'autres méthodes métier pour Equipe si nécessaire.
 }

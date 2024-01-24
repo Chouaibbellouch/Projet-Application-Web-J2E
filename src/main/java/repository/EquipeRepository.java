@@ -2,13 +2,16 @@ package repository;
 
 import entites.Equipe;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.List;
 
 public class EquipeRepository {
 
-    @PersistenceContext
     private EntityManager em;
+
+    // Méthode pour définir manuellement l'EntityManager
+    public void setEntityManager(EntityManager em) {
+        this.em = em;
+    }
 
     public Equipe findById(Long id) {
         return em.find(Equipe.class, id);
@@ -34,6 +37,6 @@ public class EquipeRepository {
             em.remove(em.merge(equipe));
         }
     }
-    
-    // Vous pouvez ajouter d'autres méthodes spécifiques aux opérations liées aux équipes ici.
+
+    // Autres méthodes...
 }
