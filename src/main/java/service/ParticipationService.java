@@ -1,36 +1,55 @@
 package service;
 
+import dao.ParticipationDao;
 import entites.Participation;
-import repository.ParticipationRepository;
 
-import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.util.List;
 
-@Stateless
 public class ParticipationService {
 
     @Inject
-    private ParticipationRepository participationRepository;
+    private ParticipationDao participationDao;
 
-    public Participation findParticipation(Long id) {
-        return participationRepository.findById(id);
+    // Constructeur par défaut
+    public ParticipationService() {
+        // L'injection est normalement gérée par le conteneur JEE ou Spring.
     }
 
-    public List<Participation> findAllParticipations() {
-        return participationRepository.findAll();
+    // Méthode pour créer une nouvelle participation
+    public void createParticipation(Participation participation) {
+        participationDao.create(participation);
     }
 
-    public Participation saveParticipation(Participation participation) {
-        return participationRepository.save(participation);
+    // Méthode pour trouver une participation par son ID
+    public Participation findParticipationById(Long id) {
+        return participationDao.findById(id);
     }
 
-    public void deleteParticipation(Long id) {
-        Participation participation = participationRepository.findById(id);
-        if (participation != null) {
-            participationRepository.delete(participation);
-        }
+    // Méthode pour mettre à jour une participation
+    public void updateParticipation(Participation participation) {
+        participationDao.update(participation);
     }
 
-    // Ajoutez ici d'autres méthodes métier pour Participation si nécessaire.
+    // Méthode pour supprimer une participation par son ID
+    public void deleteParticipationById(Long id) {
+        participationDao.delete(id);
+    }
+
+    // Méthode pour lister toutes les participations
+    public List<Participation> getAllParticipations() {
+        return participationDao.findAll();
+    }
+
+    // Méthode pour trouver des participations par joueur
+    public List<Participation> findParticipationsByJoueur(Long joueurId) {
+        return participationDao.findByJoueur(joueurId);
+    }
+
+    // Méthode pour trouver des participations par rencontre
+    public List<Participation> findParticipationsByRencontre(Long rencontreId) {
+        return participationDao.findByRencontre(rencontreId);
+    }
+
+    // Vous pouvez ajouter d'autres méthodes de service ou de validation au besoin...
 }

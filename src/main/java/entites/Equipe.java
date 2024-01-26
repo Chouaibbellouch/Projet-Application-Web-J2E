@@ -31,6 +31,10 @@ public class Equipe {
     public Equipe() {
     }
 
+    public Equipe(String nom) {
+    	this.nom = nom;
+    }
+    
     // Getters et setters
     public Long getId() {
         return id;
@@ -47,7 +51,15 @@ public class Equipe {
     public void setNom(String nom) {
         this.nom = nom;
     }
-
+    
+    public LieuxAccueil getLieuxAccueil() {
+        return lieuxAccueil;
+    }
+    
+    public void setLieuxAccueil(LieuxAccueil lieuxAccueil) {
+        this.lieuxAccueil = lieuxAccueil;
+    }
+    
     public Set<Joueur> getJoueurs() {
         return joueurs;
     }
