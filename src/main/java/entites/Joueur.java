@@ -47,7 +47,19 @@ public class Joueur {
 
     public Joueur() {
     }
-
+    
+ // Constructeur générique
+    public Joueur( String nom, String prenom, Integer age, Integer anneeDeNaissance, 
+                  String nationalite, String poste, Integer numeroDeMaillot, Equipe equipe) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.age = age;
+        this.anneeDeNaissance = anneeDeNaissance;
+        this.nationalite = nationalite;
+        this.poste = poste;
+        this.numeroDeMaillot = numeroDeMaillot;
+        this.equipe = equipe;
+    }
     // Getters et setters
     public Long getId() {
         return id;

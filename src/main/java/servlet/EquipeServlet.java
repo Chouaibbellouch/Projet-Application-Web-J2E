@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet("/equipe")
+@WebServlet("/q")
 public class EquipeServlet extends HttpServlet {
     // ...
 
@@ -103,7 +103,7 @@ public class EquipeServlet extends HttpServlet {
 		        List<Equipe> listEquipes = EquipeDao.findAll();
 		        request.setAttribute("equipes", listEquipes);
 		        RequestDispatcher dispatcher = request.getRequestDispatcher("equipe/listeEquipes.jsp");
-		        dispatcher.forward(request, response);
+		        dispatcher.forward(request,response);
 		    }
 	
 	private void getEquipe(HttpServletRequest request, HttpServletResponse response)

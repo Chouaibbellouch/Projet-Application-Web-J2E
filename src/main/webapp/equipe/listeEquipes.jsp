@@ -9,7 +9,7 @@
 <body>
     <div>
         <a href="<%=request.getContextPath()%>/afficherFormulaireAjoutEquipe" class="btn btn-success"
-           style="background-color: #b9885; border-color: #ff000096">Ajouter joueur</a>
+           style="background-color: #b9885; border-color: #ff000096">Ajouter Equipes</a>
     </div>
     <h1>Liste des Équipes</h1>
     <table border="1">

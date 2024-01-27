@@ -51,7 +51,19 @@ public class LieuxAccueil {
 
     // Getters et setters
     // ...
-
+    public LieuxAccueil(String type, String nom, String adresse, String telephone, String courriel,
+            String siteInternet, String infosPMR, Integer capacite, String commentaires) {
+    	this.type = type;
+    	this.nom = nom;
+    	this.adresse = adresse;
+    	this.telephone = telephone;
+    	this.courriel = courriel;
+    	this.siteInternet = siteInternet;
+    	this.infosPMR = infosPMR;
+    	this.capacite = capacite;
+    	this.commentaires = commentaires;
+    }
+    
     public Long getId() {
         return id;
     }

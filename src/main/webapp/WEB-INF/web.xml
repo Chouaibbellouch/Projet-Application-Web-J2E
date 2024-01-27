@@ -29,4 +29,14 @@
     <servlet-name>LieuxAccueilServlet</servlet-name>
     <url-pattern>/LieuxAccueilServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>JoueurServlet</display-name>
+    <servlet-name>JoueurServlet</servlet-name>
+    <servlet-class>servlet.JoueurServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JoueurServlet</servlet-name>
+    <url-pattern>/JoueurServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

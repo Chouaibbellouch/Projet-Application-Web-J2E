@@ -96,13 +96,26 @@ public class EquipeDao {
     public List<Equipe> findAll() {
         EntityManager em = emf.createEntityManager();
         try {
-        	System.out.println("findAll");
+            System.out.println("findAll");
             TypedQuery<Equipe> query = em.createQuery("SELECT e FROM Equipe e LEFT JOIN FETCH e.lieuxAccueil", Equipe.class);
-            return query.getResultList();
+            List<Equipe> equipes = query.getResultList();
+
+            // Affichage des équipes dans la console
+            for (Equipe equipe : equipes) {
+                System.out.println("ID: " + equipe.getId() + ", Nom: " + equipe.getNom());
+                if (equipe.getLieuxAccueil() != null) {
+                    System.out.println("Lieu d'Accueil: " + equipe.getLieuxAccueil().getNom());
+                } else {
+                    System.out.println("Lieu d'Accueil: Non défini");
+                }
+            }
+
+            return equipes;
         } finally {
             em.close();
         }
     }
+
 
 
     // Méthode pour trouver une équipe par nom
